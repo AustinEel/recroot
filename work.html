@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link href="recroot.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.datepicker');
+          var options = {};
+          var instances = M.Datepicker.init(elems, options);
+        });
+
+      </script>
+
+    </head>
+
+    <body>
+      <div class="topnav">
+        <h5 class="center-align">recroot</h5>
+      </div>
+      <div class="container">
+        <div class="row center-align">
+          <h4>Create your Profile</h4>
+        </div>
+        <div class="row center-align">
+          <img src="./img/profile2.png" style="width:50%;height:50%;">
+        </div>
+        <h2>Work Experience</h2>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">person_outline</i>
+                <input type="text" class="validate">
+                <label for="university">Position</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">card_travel</i>
+                <input type="text" class="validate">
+                <label for="degree">Company</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">today</i>
+                <input type="text" class="datepicker">
+                <label for="start">Start Date</label>
+              </div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">today</i>
+                <input type="text" class="datepicker">
+                <label for="end">End Date</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">assignment</i>
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="description">Description</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="center-align">
+            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        <div class="form-group right" style="padding-bottom: 50px">
+          <button type="submit" class="signupbtn">Next</button>
+      </div>
+      </div>
+
+      
+    </body>
+  </html>
