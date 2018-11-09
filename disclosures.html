@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link href="recroot.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    </head>
+
+    <body>
+      <div class="topnav">
+        <h5 class="center-align">recroot</h5>
+      </div>
+      <div class="container">
+        <div class="row center-align">
+          <h4>Create your Profile</h4>
+        </div>
+        <div class="progressbar">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="active" ></li>
+            <li></li>
+        </ul> 
+    </div>
+        <h2>Voluntary Disclosures</h2>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <select>
+                    <option value="" disabled selected>Choose an option</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <label>Gender</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <select>
+                    <option value="" disabled selected>Choose an option</option>
+                    <option value="american-indian">American Indian or Alaska Native</option>
+                    <option value="asian">Asian</option>
+                    <option value="black">Black or African American</option>
+                    <option value="hawaiian">Native Hawaiian or Other Pacific Islander</option>
+                    <option value="white">White</option>
+                    <option value="hispanic">Hispanic or Latino or Spanish Origin</option>
+                    <option value="nothispanics">Not Hispanic or Latino or Spanish Origin</option>
+                </select>
+                <label>Ethnicity</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                    <select>
+                        <option value="" disabled selected>Choose an option</option>
+                        <option value="disabled-veteran">Disabled Veteran</option>
+                        <option value="active-war-vet">Active Wartime or Campaign Badge Veteran</option>
+                        <option value="armed">Armed Forces SErvice Medal Veteran</option>
+                        <option value="am">I am a protected veteran, but I choose not to self identify the classifications to which I belong</option>
+                        <option value="notprotected">I am NOT a protected veteran</option>
+                        <option value="not">I am NOT a veteran</option>
+                        <option value="abstainvet">Prefer not to answer</option>
+                    </select>
+                <label>Veteran Status</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                    <select>
+                        <option value="" disabled selected>Choose an option</option>
+                        <option value="have">I do NOT have a disability</option>
+                        <option value="havenot">I have a disability</option>
+                        <option value="abstaindis">Prefer not to answer</option>
+                    </select>
+                <label>Disabilities</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form-group right" style="padding-bottom: 50px">
+          <button type="submit" class="signupbtn">Next</button>
+      </div>
+      </div>
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script>
+            // Or with jQuery
+
+        $(document).ready(function(){
+            $('select').formSelect();
+         });
+        </script>
+    </body>
+  </html>
