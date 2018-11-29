@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link href="recroot.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.datepicker');
+      var instances = M.Datepicker.init(elems, options);
+    });
+
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBwzxC6pW8YkqwD-4jxkiwi-YIcTjegUKk",
+      authDomain: "recroot-e14b9.firebaseapp.com",
+      databaseURL: "https://recroot-e14b9.firebaseio.com",
+      projectId: "recroot-e14b9",
+      storageBucket: "recroot-e14b9.appspot.com",
+      messagingSenderId: "411381874525"
+    };
+    firebase.initializeApp(config);
+  </script>
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="#login">Login</a>
+  </div>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Applications')" id="defaultOpen">Applications</button>
+    <button class="tablinks" onclick="openTab(event, 'Inbox')">Inbox</button>
+    <button class="tablinks" onclick="openTab(event, 'Calendar')">Calendar</button>
+  </div>
+
+  <div id="Applications" class="tabcontent">
+    <div class="apptabs">
+      <button class="apptab" onclick="openAppTab('Applied')">Applied</button>
+      <button class="apptab" onclick="openAppTab('Progress')">In Progress</button>
+      <button class="apptab" onclick="openAppTab('Completed')">Completed</button>
+    </div>
+
+    <div id="Applied" class="w3-container city">
+      <h2>Applied</h2>
+      <button class="apptab" onclick="writeUserData('title1', 'body1')">Add entry</button>
+      <table class="highlight">
+        <thead>
+          <tr>
+              <th>Subject</th>
+              <th>Excerpt</th>
+              <th>Date</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr id="inboxdiv">
+          </tr>
+        </div>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="Progress" class="w3-container city" style="display:none">
+      <h2>In Progress</h2>
+    </div>
+
+    <div id="Completed" class="w3-container city" style="display:none">
+      <h2>Completed</h2>
+    </div>
+  </div>
+
+  <div id="Inbox" class="tabcontent">
+    <h3>Inbox</h3>
+  </div>
+
+  <div id="Calendar" class="tabcontent">
+    <h3>Calendar</h3>
+  </div>
+
+
+  <script src="./js/jquery-1.9.0.min.js"></script>
+  <script src="./js/jquery-ui-1.10.0.custom.min.js"></script>
+  <script src="./js/app.js"></script>
+  <script>
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    function openAppTab(tabName) {
+      var i;
+      var x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      document.getElementById(tabName).style.display = "block";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>
