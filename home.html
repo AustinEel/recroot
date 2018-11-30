@@ -7,6 +7,7 @@
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   <link href="recroot.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="./img/owl.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -118,13 +119,11 @@
   </div>
 
   <div id="profile_modal" class="modal">
-
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
-      </div>
-    
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Some text in the Modal..</p>
     </div>
+  </div>
 
     <!-- INBOX MODALS FOR MOCK MESSAGES -->
     <div id="modal1" class="modal">
@@ -203,7 +202,7 @@
 <script src='lib/moment.min.js'></script>
 <script src='calendar/fullcalendar.js'></script>
 
-<script>
+<!-- <script>
   $(function () {
       $('#calendar').fullCalendar({
         // put your options and callbacks here
@@ -226,13 +225,26 @@
         eventColor: '#7A003D',
         timeFormat: 'h:mmt', 
         fixedWeekCount: false,
-        height: "auto",
-        aspectRatio: 1
+        height: "auto"
       })
-      //var calendar = $('#calendar').fullCalendar('getCalendar');
-
+      // var calendar = $('#calendar').fullCalendar('getCalendar');
+      $('#calendar').fullCalendar("addEventSource", {
+      events: [
+        {
+          title: 'Event1',
+          start: '2018-11-04'
+        },
+        {
+          title: 'Event2',
+          start: '2018-11-05'
+        }
+        // etc...
+      ],
+      color: 'yellow',   // an option!
+      textColor: 'black' // an option!
+    })
 
     });
-</script>
+</script> -->
 </body>
 </html>
