@@ -6,6 +6,7 @@
   <link href="recroot.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link rel="shortcut icon" href="./img/owl.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
@@ -169,10 +170,7 @@
 							$form.addClass( data.success == true ? 'is-success' : 'is-error' );
 							if( !data.success ) $errorMsg.text( data.error );
 						},
-						error: function()
-						{
-							alert( 'Error. Please, contact the webmaster!' );
-						}
+			
 					});
 				}
 				else // fallback Ajax solution upload for older browsers

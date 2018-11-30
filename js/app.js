@@ -1,4 +1,5 @@
 var database = firebase.database();
+var cloud = firebase.storage().ref();
 const settings = {timestampsInSnapshots: true};
 
 // function getFormattedDate(date) {
@@ -45,6 +46,10 @@ const settings = {timestampsInSnapshots: true};
 //       status: appstatus
 //     });
 //   }
+
+function uploadResume() {
+  console.log("resume");
+}
 
 function registerNewUser() {
   var name = $("#name").val();
