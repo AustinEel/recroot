@@ -17,6 +17,19 @@
     });
 
   </script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBwzxC6pW8YkqwD-4jxkiwi-YIcTjegUKk",
+        authDomain: "recroot-e14b9.firebaseapp.com",
+        databaseURL: "https://recroot-e14b9.firebaseio.com",
+        projectId: "recroot-e14b9",
+        storageBucket: "recroot-e14b9.appspot.com",
+        messagingSenderId: "411381874525"
+      };
+      firebase.initializeApp(config);
+    </script>
 </head>
 
 <body>
@@ -53,6 +66,22 @@
 
   <div id="Inbox" class="tabcontent">
     <h3>Inbox</h3>
+    <!-- DELETE THIS LATER, JUST TO POPULATE THE DB -->
+    <button class="apptab" onclick="writeUserData('title1', 'body1')">Add entry</button>
+    <table class="highlight">
+      <thead>
+        <tr>
+            <th>Subject</th>
+            <th>Excerpt</th>
+            <th>Date</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr id="inboxdiv">
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <div id="Calendar" class="tabcontent">
@@ -87,6 +116,9 @@
     document.getElementById("defaultOpen").click();
   </script>
 
+<script src="./js/jquery-1.9.0.min.js"></script>
+<script src="./js/jquery-ui-1.10.0.custom.min.js"></script>
+<script src="./js/app.js"></script>
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
