@@ -34,8 +34,8 @@
 </head>
 
 <body>
-  <div class="topnav">
-    <a href="profile.html"><i class="fas fa-user-circle" id="profile"></i></a>
+  <div class="topnav" onclick="viewProfileModal()">
+    <a href="#profile"><i class="fas fa-user-circle" id="profile"></i></a>
   </div>
   <div class="tab">
     <button class="tablinks" onclick="openTab(event, 'Applications')" id="defaultOpen">Applications</button>
@@ -112,6 +112,15 @@
     <br>
     <div id='calendar'></div>
   </div>
+
+  <div id="profile_modal" class="modal">
+
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    
+    </div>
 
   <script>
     function openTab(evt, tabName) {

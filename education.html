@@ -31,23 +31,42 @@
         <div class="row center-align">
           <h4>Create your Profile</h4>
         </div>
-        <div class="row center-align">
-          <img src="./img/profile2.png" style="width:50%;height:50%;">
-        </div>
+        <div class="progressbar">
+            <ul>
+                <li></li>
+                <li class="active" ></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul> 
         <h2>Education</h2>
         <div class="row">
           <form class="col s12">
             <div class="row">
               <div class="input-field col s12">
                 <i class="material-icons prefix">school</i>
-                <input type="text" class="validate">
+                <input type="text" class="validate" list="universities">
+                <datalist id="universities">
+                    <option value="University of California, Los Angeles">
+                    <option value="University of California, Berkeley">
+                    <option value="University of Southern California">
+                    <option value="Stanford">
+                    <option value="Harvard">
+                  </datalist>
                 <label for="university">University</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
                 <i class="material-icons prefix">note</i>
-                <input type="text" class="validate">
+                <input type="text" class="validate" list="degrees">
+                <datalist id="degrees">
+                    <option value="Bachelor of Science">
+                    <option value="Bachelor of Arts">
+                    <option value="Master's">
+                    <option value="PhD">
+                    <option value="Postdoctoral">
+                  </datalist>
                 <label for="degree">Degree</label>
               </div>
             </div>
