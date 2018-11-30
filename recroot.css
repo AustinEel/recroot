@@ -541,3 +541,14 @@ div.progressbar li:last-child {
 .review_right {
   float: right;
 }
+
+.resize {
+  margin-top: 5px;
+  width: 45px;
+  height: auto;
+  display: inline-block;
+}
+
+.pls {
+  display: inline-block;
+}
