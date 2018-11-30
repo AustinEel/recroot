@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Recroot</title>
-  <link href="recroot.css" rel="stylesheet" />
-  <link rel="shortcut icon" href="./img/owl.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBwzxC6pW8YkqwD-4jxkiwi-YIcTjegUKk",
-      authDomain: "recroot-e14b9.firebaseapp.com",
-      databaseURL: "https://recroot-e14b9.firebaseio.com",
-      projectId: "recroot-e14b9",
-      storageBucket: "recroot-e14b9.appspot.com",
-      messagingSenderId: "411381874525"
-    };
-    firebase.initializeApp(config);
-  </script>
+    <meta charset="UTF-8">
+    <title>Recroot</title>
+    <link href="recroot.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBwzxC6pW8YkqwD-4jxkiwi-YIcTjegUKk",
+            authDomain: "recroot-e14b9.firebaseapp.com",
+            databaseURL: "https://recroot-e14b9.firebaseio.com",
+            projectId: "recroot-e14b9",
+            storageBucket: "recroot-e14b9.appspot.com",
+            messagingSenderId: "411381874525"
+        };
+        firebase.initializeApp(config);
+    </script>
 </head>
+
 <body>
-    <div class="topnav">
-      <a href="login.html">Login</a>
-    </div>
+    <div class="bg">
     <div class="name">
-      <h1>Recroot</h1>
+        <h1>Recroot</h1>
     </div>
     <div class="signup">
-      <p>Signup</p>
-      <form class="gray-container">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" class="form-control" id="name">
+        <!-- <p>Signup</p> -->
+        <form class="gray-container">
+            <div class="input-field">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="input-field">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email">
+            </div>
+            <div class="input-field">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd1">
+            </div>
+            <div class="input-field">
+                <label for="pwd">Confirm Password:</label>
+                <input type="password" class="form-control" id="pwd2">
+            </div>
+        </form>
+        <div class="invalid">
+            <p hidden id="name_invalid">Please enter a valid name.</p>
+            <p hidden id="email_invalid">Please enter a valid email.</p>
+            <p hidden id="pwd_invalid">Your passwords do not match.</p>
         </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="text" class="form-control" id="email">
+        <div>
+            <button type="submit" class="signupbtn" id="signupbtn">Sign Up</button>
+            <a href="./login.html"><button type="submit" class="loginbtn">Or, Log In</button></a>
         </div>
-        <div class="form-group">
-          <label for="pwd">Password:</label>
-          <input type="password" class="form-control" id="pwd1">
-        </div>
-        <div class="form-group">
-          <label for="pwd">Confirm Password:</label>
-          <input type="password" class="form-control" id="pwd2">
-        </div>
-      </form>
-      <div class="invalid">
-        <p hidden id="name_invalid">Please enter a valid name.</p>
-        <p hidden id="email_invalid">Please enter a valid email.</p>
-        <p hidden id="pwd_invalid">Your passwords do not match.</p>
-      </div>
-      <div>
-        <button type="submit" class="signupbtn" id="signupbtn">Sign Up</button>
-      </div>
     </div>
-  <script src="./js/jquery-1.9.0.min.js"></script>
-  <script src="./js/jquery-ui-1.10.0.custom.min.js"></script>
-  <script src="./js/app.js"></script>
+    </div>
+
+    </div>
+    <script src="./js/jquery-1.9.0.min.js"></script>
+    <script src="./js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="./js/app.js"></script>
 </body>
+
 </html>
