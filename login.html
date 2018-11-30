@@ -5,8 +5,11 @@
   <title>Recroot</title>
   <link href="recroot.css" rel="stylesheet" />
   <link rel="shortcut icon" href="./img/owl.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <script type="text/javascript" src="js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -22,29 +25,31 @@
   </script>
 </head>
 <body>
-  <div class="topnav">
+  <!-- <div class="topnav">
     <a href="index.html">Back to Sign Up</a>
-  </div>
-  <div class="name">
-    <h1>Hi again!</h1>
-  </div>
-  <div class="signup">
-    <p>Login</p>
-    <form class="gray-container">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" class="form-control" id="l_name">
-      </div>
-      <div class="form-group">
-        <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="l_pwd">
-      </div>
-    </form>
-    <div class="invalid">
-      <p hidden id="login_invalid">Your login credentials don't match. Try again.</p>
+  </div> -->
+  <div class="bg">
+    <div class="name">
+      <h1>Hi again!</h1>
     </div>
-    <div>
-      <button type="submit" class="signupbtn" id="loginbtn">Log In</button>
+    <div class="signup">
+      <h4>Login</h4>
+      <form class="gray-container">
+        <div class="input-field">
+          <label for="name">Username:</label>
+          <input type="text" class="form-control" id="l_name">
+        </div>
+        <div class="input-field">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="l_pwd">
+        </div>
+      </form>
+      <div class="invalid">
+        <p hidden id="login_invalid">Your login credentials don't match. Try again.</p>
+      </div>
+      <div>
+        <button type="submit" class="signupbtn" id="loginbtn">Log In</button>
+      </div>
     </div>
   </div>
 
