@@ -20,6 +20,20 @@
           var instances = M.Datepicker.init(elems, options);
         });
 
+        function inputCheck() {
+          console.log("test");
+          var university = document.getElementById("university").value;
+          var degree = document.getElementById("degree").value;
+          var major = document.getElementById("major").value;
+          var graduation = document.getElementById("graduation").value;
+          var gpa = document.getElementById("gpa").value;
+          if (university == "" || degree == "" || major == "" || graduation == "" || gpa == "") {
+            document.getElementById("error").style.display = "block";;
+          } else {
+            window.location.href = "disclosures.html";
+          }
+        }
+
       </script>
 
     </head>
@@ -89,10 +103,11 @@
                 <label for="gpa">GPA</label>
               </div>
             </div>
+            <p hidden id="error">Please enter valid inputs.</p>
           </form>
         </div>
         <div class="form-group right" style="padding-bottom: 50px">
-          <a href="disclosures.html"><button type="submit" class="signupbtn">Next</button></a>
+          <button type="submit" onclick="inputCheck()" class="signupbtn">Next</button>
         </div>
       </div>
       </div>

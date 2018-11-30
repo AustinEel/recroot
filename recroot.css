@@ -136,6 +136,11 @@ label {
   color: red;
 }
 
+#error {
+  font-size: 12px;
+  color: red;
+}
+
 .clearnav {
   background-color: rgba(0, 0, 0, 0);
   overflow: hidden;
@@ -464,6 +469,9 @@ label {
   background-color: #0f3c4b;
 }
 
+.modal {
+  background-color: #fff;
+}
 
 
 
@@ -524,4 +532,12 @@ div.progressbar li:last-child {
   flex-grow: 0;
   flex-shrink: 1;
   /* Shorthand: flex: 0 1 0; */
+}
+
+.review_left {
+  float: left;
+}
+
+.review_right {
+  float: right;
 }
