@@ -458,7 +458,7 @@ label {
 }
 
 div.progressbar li {
-  background: #FFA500;
+  background: #7A003D;
   color: white;
   content: ' ';
   display: flex;
@@ -473,7 +473,7 @@ div.progressbar li {
 
 div.progressbar li::before {
   color: white;
-  background: #FFA500;
+  background: #7A003D;
   border-radius: 50%;
   counter-increment: stepCount;
   content: '';
