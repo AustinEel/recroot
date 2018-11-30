@@ -306,7 +306,8 @@ temporary rendered events).
 .fc-row .fc-content-skeleton td,
 .fc-row .fc-helper-skeleton td {
   /* don't put a border between events and/or the day number */
-  border-bottom: 0; }
+  /* border-bottom: 0;  */
+}
 
 .fc-row .fc-content-skeleton tbody td,
 .fc-row .fc-helper-skeleton tbody td {

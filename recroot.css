@@ -2,6 +2,11 @@ body {
     background-color: #fff;
     margin: 0;
     font-family: 'Comfortaa';
+    height: 100%;
+}
+
+html {
+  height: 100%;
 }
 
 h1 {
@@ -104,6 +109,7 @@ label {
 .topnav {
     background-color: #FFA500;
     overflow: hidden;
+    height: 6%;
 }
 
 /* Style the links inside the navigation bar */
@@ -135,7 +141,7 @@ label {
     border: 1px solid #ccc;
     background-color: #f1f1f1;
     width: 15%;
-    height: 564px;
+    height: 94%;
 }
 
 /* Style the buttons inside the tab */
@@ -168,7 +174,6 @@ label {
 .tabcontent {
     float: left;
     padding: 0px 30px;
-    border: 1px solid #ccc;
     width: 85%;
     border-left: none;
     height: 564px;
