@@ -1,7 +1,7 @@
 body {
     background-color: #fff;
     margin: 0;
-    font-family: 'Comfortaa';
+    font-family: 'Barlow';
     height: 100%;
 }
 
@@ -10,41 +10,42 @@ html {
 }
 
 h1 {
-  font-family: 'Comfortaa';
+  font-family: 'Barlow';
   font-size: 60px;
 }
 
 h2 {
-  font-family: 'Comfortaa';
+  font-family: 'Barlow';
   font-size: 40px;
 }
 
 h4 {
-  font-family: 'Comfortaa';
+  font-family: 'Barlow';
   margin-top: 30px;
 }
 
 h5 {
-  font-family: 'Comfortaa';
+  font-family: 'Barlow';
   font-size: 20px;
   color: white;
 }
 
 p {
-  font-family: 'Comfortaa';
+  font-family: 'Barlow';
   font-size: 20px;
 }
 
 label {
-  font-family: 'Comfortaa';
+  font-family: 'Barlow';
   font-size: 16px;
 }
 
 .gray-container {
   padding: 20px 20px;
   border: none;
-  background-color: #f2f2f2;
+  background-color: rgba(242, 242, 242, 0.75);
   border-radius: 10px;
+  width: 400px;
 }
 
 .form-group {
@@ -52,58 +53,67 @@ label {
 }
 
 .signupbtn {
-  background-color: #FFA500;
+  background-color: #7A003D;
   border: none;
   border-radius: 5px;
   color: white;
   padding: 12px 20px;
   margin-top: 16px;
   font-size: 16px;
-  font-family: 'Comfortaa';
+  font-family: 'Barlow';
 }
 .acceptbtn {
-  background-color: green;
+  background-color: rgb(18, 177, 18);
   border: none;
   border-radius: 5px;
   color: white;
   padding: 12px 20px;
   margin-top: 16px;
   font-size: 16px;
-  font-family: 'Comfortaa';
+  font-family: 'Barlow';
 }
 
 .declinebtn {
-  background-color: red;
+  background-color: rgb(189, 43, 43);
   border: none;
   border-radius: 5px;
   color: white;
   padding: 12px 20px;
   margin-top: 16px;
   font-size: 16px;
-  font-family: 'Comfortaa';
+  font-family: 'Barlow';
 }
 
 .loginbtn {
-  background-color: #FFA500;
+  background-color: white;
   border: none;
   border-radius: 5px;
-  color: white;
+  color:  #7A003D;
   padding: 12px 20px;
   margin-top: 16px;
   font-size: 16px;
-  font-family: 'Comfortaa';
+  font-family: 'Barlow';
+  margin-left: 15px;
 }
 
 .name {
-  float: left;
-  display: inline-block;
-  padding: 100px 200px;
+  /* float: left;
+  display: block; */
+  /* padding: 50px 200px; */
   top: 30%;
+  position: fixed;
+  top: 30px;
+  left: 200px;
 }
 
 .signup {
-  padding: 100px 80px;
-  float: left;
+  /* padding: 100px 80px; */
+  /* float: left;
+  display: block; */
+  /* padding: 0px 200px; */
+  position: fixed;
+  top: 150px;
+  left: 200px;
 }
 
 #name_invalid {
@@ -126,21 +136,50 @@ label {
   color: red;
 }
 
+.clearnav {
+  background-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  height: 6%;
+}
+
+.clearnav a {
+    float: right;
+    color: #222222;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Barlow';
+    font-size: 17px;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("img/home2.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #FFA500;
+    background-color: #7A003D;
     overflow: hidden;
-    height: 6%;
+    height: 8%;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
     float: right;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: 'Comfortaa';
+    font-family: 'Barlow';
     font-size: 17px;
 }
 
@@ -178,7 +217,7 @@ label {
     cursor: pointer;
     transition: 0.3s;
     font-size: 17px;
-    font-family: 'Comfortaa';
+    font-family: 'Barlow';
 }
 
 /* Change background color of buttons on hover */
@@ -198,7 +237,7 @@ label {
     width: 85%;
     border-left: none;
     height: 564px;
-    font-family: 'Comfortaa';
+    font-family: 'Barlow';
 }
 
 .apptab {
@@ -211,20 +250,20 @@ label {
   text-align: left;
   cursor: pointer;
   transition: 0.3s;
-  font-family: 'Comfortaa';
+  font-family: 'Barlow';
   font-size: 17px;
 }
 
 /*different from recroot.css*/
 
 #nextbtn {
-  background-color: #FFA500;
+  background-color: #7A003D;
   border: none;
   border-radius: 5px;
   color: white;
   padding: 12px 20px;
   font-size: 16px;
-  font-family: 'Comfortaa';
+  font-family: 'Barlow';
   float: right;
   margin-right: 20vw;
   margin-top: 10vh;

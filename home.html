@@ -7,7 +7,7 @@
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   <link href="recroot.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script type="text/javascript">
@@ -35,7 +35,9 @@
 
 <body>
   <div class="topnav" onclick="viewProfileModal()">
-    <a href="#profile"><i class="fas fa-user-circle" id="profile"></i></a>
+    <span style="font-size: 28px; float: right; margin-right: 4px; margin-top: 4px">
+    <i class="fas fa-user-circle" id="profile"></i>
+  </span>
   </div>
   <div class="tab">
     <button class="tablinks" onclick="openTab(event, 'Applications')" id="defaultOpen">Applications</button>
@@ -140,8 +142,8 @@
         <div class="modal-content">
             <h4>Congratulations! We'd like to extend you an offer!</h4>
             <strong>From: Two Sigma HR</strong>
-            <p>Congratulations! Everyone was super impressed by your interview, and we would love to extend an offer to you for the position of <strong>Software Engineer Intern</strong></p>
-            <center><button class="acceptbtn">Accept</button><span></span><button class="declinebtn">Deny</button></center>
+            <p>Congratulations! Everyone was super impressed by your interview, and we would love to extend an offer to you for the position of <strong>Software Engineer Intern.</strong></p>
+            <center><button class="acceptbtn">Accept</button><br /><br /><hr /><button class="declinebtn">Deny</button></center>
           </div>
         <div class="modal-footer">
           <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Dismiss</a>
@@ -210,10 +212,11 @@
             allDay: false // will make the time show
           }
         ],
-        eventColor: '#FFA500',
+        eventColor: '#7A003D',
         timeFormat: 'h:mmt', 
         fixedWeekCount: false,
-        height: "parent"
+        height: "auto",
+        aspectRatio: 1
       })
       //var calendar = $('#calendar').fullCalendar('getCalendar');
 

@@ -93,6 +93,15 @@ function readURL(input) {
   }
 }
 
+function viewProfileModal() {
+  var modal = document.getElementById("profile_modal");
+  modal.style.display = "block";
+
+  var close = document.getElementsByClassName("close")[0];
+  close.onclick = function() {
+    modal.style.display = "none";
+  }
+} 
 
 $( document ).ready(function () {
 //POPULATE INBOX VIEW
