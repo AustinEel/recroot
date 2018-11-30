@@ -113,9 +113,9 @@ $( document ).ready(function () {
   database.ref('inbox').once('value', snapshot => {
     snapshot.forEach(snap => {
         if(snap.val().id == "inbox1") {
-            $('#inboxdiv').after("<tr><td>" + snap.val().subject + "</td><td>" + snap.val().body + "</td><td>" + snap.val().date + "</td><td><button class='edit_data btn orange modal-trigger' data-toggle='modal' data-target='modalinbox2'>Open</button></td></tr>");
+            $('#inboxdiv').after("<tr><td>" + snap.val().subject + "</td><td>" + snap.val().body + "</td><td>" + snap.val().date + "</td><td><button class='edit_data signupbtn modal-trigger' data-toggle='modal' data-target='modalinbox2'>Open</button></td></tr>");
         } else {
-            $('#inboxdiv').after("<tr><td>" + snap.val().subject + "</td><td>" + snap.val().body + "</td><td>" + snap.val().date + "</td><td><button class='edit_data btn orange modal-trigger' data-toggle='modal' data-target='modal1'>Open</button></td></tr>");
+            $('#inboxdiv').after("<tr><td>" + snap.val().subject + "</td><td>" + snap.val().body + "</td><td>" + snap.val().date + "</td><td><button class='edit_data signupbtn modal-trigger' data-toggle='modal' data-target='modal1'>Open</button></td></tr>");
         }
    });
   });
@@ -128,7 +128,7 @@ $( document ).ready(function () {
 
   database.ref('decisions').once('value', snapshot => {
     snapshot.forEach(snap => {
-        $('#decisionsdiv').after("<tr><td>" + snap.val().company + "</td><td>" + snap.val().role + "</td><td>" + snap.val().date + "</td><td class='" + snap.val().status + "'>" + snap.val().status + "</td><td><button class='edit_data btn orange modal-trigger' data-toggle='modal' data-target='modal2'>Open</button></td></tr>");
+        $('#decisionsdiv').after("<tr><td>" + snap.val().company + "</td><td>" + snap.val().role + "</td><td>" + snap.val().date + "</td><td class='" + snap.val().status + "'>" + snap.val().status + "</td><td><button class='edit_data signupbtn modal-trigger' data-toggle='modal' data-target='modal2'>Open</button></td></tr>");
    });
   });
 
@@ -207,6 +207,7 @@ $(function () {
       ]
     })
   }
+  document.getElementById ("modalinbox2").addEventListener("click", addEventToCalendar(addEventToCalendar('ASUCLA Interview', '2018-11-05T14:00:00')), false);
   // var calendar = $('#calendar').fullCalendar('getCalendar');
   // $('#calendar').fullCalendar("addEventSource", {
   //   events: [
