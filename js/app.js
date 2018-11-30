@@ -196,7 +196,17 @@ $(function () {
       ]
     })
   }
-  document.getElementById ("modalinbox2").addEventListener("click", addEventToCalendar('ASUCLA Interview', '2018-11-05T14:00:00'), false);
+
+  // $("#calendar").fullCalendar("removeEventSource", {
+  //   events: [
+  //     {
+  //       title: "ASUCLA Interview",
+  //       start: "2018-11-28T13:00:00"
+  //     }
+  //   ]
+  // });
+
+  document.getElementById ("scheduleevent").addEventListener("click", addEventToCalendar('ASUCLA Interview', '2018-11-23T13:00:00'), false);
   // var calendar = $('#calendar').fullCalendar('getCalendar');
   // $('#calendar').fullCalendar("addEventSource", {
   //   events: [
