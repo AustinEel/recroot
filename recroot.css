@@ -61,6 +61,27 @@ label {
   font-size: 16px;
   font-family: 'Comfortaa';
 }
+.acceptbtn {
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 16px;
+  font-size: 16px;
+  font-family: 'Comfortaa';
+}
+
+.declinebtn {
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 16px;
+  font-size: 16px;
+  font-family: 'Comfortaa';
+}
 
 .loginbtn {
   background-color: #FFA500;
@@ -295,7 +316,7 @@ label {
 }
 
 .Received {
-  color: blue;
+  color: black;
 }
 
 .Reviewing {

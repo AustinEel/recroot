@@ -77,6 +77,7 @@
                 <th>Role</th>
                 <th>Submitted</th>
                 <th>Decision</th>
+                <th></th>
             </tr>
           </thead>
   
@@ -98,6 +99,7 @@
             <th>Subject</th>
             <th>Excerpt</th>
             <th>Date</th>
+            <th></th>
         </tr>
       </thead>
 
@@ -120,6 +122,30 @@
         <p>Some text in the Modal..</p>
       </div>
     
+    </div>
+
+    <!-- INBOX MODALS FOR MOCK MESSAGES -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>You're Invited to onsite interviews!</h4>
+          <strong>From: ASUCLA R&D</strong>
+          <p></p>
+          <p>We want to know more about you!</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Dismiss</a>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <h4>Congratulations! We'd like to extend you an offer!</h4>
+            <strong>From: Two Sigma HR</strong>
+            <p>Congratulations! Everyone was super impressed by your interview, and we would love to extend an offer to you for the position of <strong>Software Engineer Intern</strong></p>
+            <center><button class="acceptbtn">Accept</button><span></span><button class="declinebtn">Deny</button></center>
+          </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Dismiss</a>
+        </div>
     </div>
 
   <script>
@@ -152,14 +178,18 @@
 
 <script src="./js/jquery-1.9.0.min.js"></script>
 <script src="./js/jquery-ui-1.10.0.custom.min.js"></script>
+<script src="./js/materialize.js"></script>
 <script src="./js/app.js"></script>
+<script>
+  $('.modal').modal();
+</script>
   <!--JavaScript at end of body for optimized loading-->
-<script type="text/javascript" src="js/materialize.min.js"></script>
 
 <!-- For the calendar -->
 <script src='lib/jquery.min.js'></script>
 <script src='lib/moment.min.js'></script>
 <script src='calendar/fullcalendar.js'></script>
+
 <script>
   $(function () {
       $('#calendar').fullCalendar({

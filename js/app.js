@@ -93,33 +93,24 @@ function readURL(input) {
   }
 }
 
-function viewProfileModal() {
-  var modal = document.getElementById("profile_modal");
-  modal.style.display = "block";
-
-  var close = document.getElementsByClassName("close")[0];
-  close.onclick = function() {
-    modal.style.display = "none";
-}
-}
 
 $( document ).ready(function () {
 //POPULATE INBOX VIEW
   database.ref('inbox').once('value', snapshot => {
     snapshot.forEach(snap => {
-        $('#inboxdiv').after("<tr><td>" + snap.val().subject + "</td><td>" + snap.val().body + "</td><td>" + snap.val().date + "</td>");
+        $('#inboxdiv').after("<tr class='clickable-row' data-target='modal1'><td>" + snap.val().subject + "</td><td>" + snap.val().body + "</td><td>" + snap.val().date + "</td><td><button class='edit_data btn orange modal-trigger' data-toggle='modal' data-target='modal1'>Open</button></td></tr>");
    });
   });
   // POPULATE APPLICATION VIEW
   database.ref('applications').once('value', snapshot => {
     snapshot.forEach(snap => {
-        $('#applicationsdiv').after("<tr><td>" + snap.val().company + "</td><td>" + snap.val().role + "</td><td>" + snap.val().date + "</td><td class='" + snap.val().status + "'>" + snap.val().status + "</td>");
+        $('#applicationsdiv').after("<tr><td>" + snap.val().company + "</td><td>" + snap.val().role + "</td><td>" + snap.val().date + "</td><td class='" + snap.val().status + "'>" + snap.val().status + "</td></tr>");
    });
   });
 
   database.ref('decisions').once('value', snapshot => {
     snapshot.forEach(snap => {
-        $('#decisionsdiv').after("<tr><td>" + snap.val().company + "</td><td>" + snap.val().role + "</td><td>" + snap.val().date + "</td><td class='" + snap.val().status + "'>" + snap.val().status + "</td>");
+        $('#decisionsdiv').after("<tr><td>" + snap.val().company + "</td><td>" + snap.val().role + "</td><td>" + snap.val().date + "</td><td class='" + snap.val().status + "'>" + snap.val().status + "</td><td><button class='edit_data btn orange modal-trigger' data-toggle='modal' data-target='modal2'>Open</button></td></tr>");
    });
   });
 
