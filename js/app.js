@@ -107,7 +107,11 @@ $( document ).ready(function () {
 //POPULATE INBOX VIEW
   database.ref('inbox').once('value', snapshot => {
     snapshot.forEach(snap => {
-        $('#inboxdiv').after("<tr class='clickable-row' data-target='modal1'><td>" + snap.val().subject + "</td><td>" + snap.val().body + "</td><td>" + snap.val().date + "</td><td><button class='edit_data btn orange modal-trigger' data-toggle='modal' data-target='modal1'>Open</button></td></tr>");
+        if(snap.val().id == "inbox1") {
+            $('#inboxdiv').after("<tr><td>" + snap.val().subject + "</td><td>" + snap.val().body + "</td><td>" + snap.val().date + "</td><td><button class='edit_data btn orange modal-trigger' data-toggle='modal' data-target='modalinbox2'>Open</button></td></tr>");
+        } else {
+            $('#inboxdiv').after("<tr><td>" + snap.val().subject + "</td><td>" + snap.val().body + "</td><td>" + snap.val().date + "</td><td><button class='edit_data btn orange modal-trigger' data-toggle='modal' data-target='modal1'>Open</button></td></tr>");
+        }
    });
   });
   // POPULATE APPLICATION VIEW
