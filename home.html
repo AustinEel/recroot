@@ -46,27 +46,51 @@
   <div id="Applications" class="tabcontent">
     <div class="apptabs">
       <button class="apptab" onclick="openAppTab('Applied')">Applied</button>
-      <button class="apptab" onclick="openAppTab('Progress')">In Progress</button>
-      <button class="apptab" onclick="openAppTab('Completed')">Completed</button>
+      <button class="apptab" onclick="openAppTab('Decisions')">Decisions</button>
     </div>
 
     <div id="Applied" class="w3-container city">
       <h2>Applied</h2>
+      <table class="highlight">
+        <thead>
+          <tr>
+              <th>Company</th>
+              <th>Role</th>
+              <th>Submitted</th>
+              <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr id="applicationsdiv">
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div id="Progress" class="w3-container city" style="display:none">
-      <h2>In Progress</h2>
-    </div>
-
-    <div id="Completed" class="w3-container city" style="display:none">
-      <h2>Completed</h2>
+    <div id="Decisions" class="w3-container city" style="display:none">
+      <h2>Decisions</h2>
+      <table class="highlight">
+          <thead>
+            <tr>
+                <th>Company</th>
+                <th>Role</th>
+                <th>Submitted</th>
+                <th>Decision</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr id="decisionsdiv">
+            </tr>
+          </tbody>
+        </table>
     </div>
   </div>
 
   <div id="Inbox" class="tabcontent">
     <h3>Inbox</h3>
     <!-- DELETE THIS LATER, JUST TO POPULATE THE DB -->
-    <button class="apptab" onclick="writeUserData('title1', 'body1')">Add entry</button>
     <table class="highlight">
       <thead>
         <tr>
