@@ -70,4 +70,29 @@ $( document ).ready(function () {
       window.location.href = "resume.html";
     }
   });
+
+  $("#loginbtn").click(function() {
+    console.log("log in");
+    var name = $("#l_name").val();
+    var pwd = $("#l_pwd").val();
+    var match_found = false;
+
+    database.ref('users/').once('value').then(function(snapshot) {
+      snapshot.forEach(function(data) {
+        console.log("name", name, "pwd", pwd);
+        console.log(data.val().name, data.val().password);
+        if (name == data.val().name && pwd == data.val().password) {
+          match_found = true;
+          window.location.href = "home.html";
+        }
+      });
+      if (!match_found) {
+        $("#login_invalid").show();
+      }
+    });
+  });
+
+  $("#profile").click(function() {
+    console.log("profile click");
+  })
 });

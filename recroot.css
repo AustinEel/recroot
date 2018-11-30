@@ -52,7 +52,18 @@ label {
   border-radius: 5px;
   color: white;
   padding: 12px 20px;
-  margin-top: 12px;
+  margin-top: 16px;
+  font-size: 16px;
+  font-family: 'Comfortaa';
+}
+
+.loginbtn {
+  background-color: #FFA500;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 16px;
   font-size: 16px;
   font-family: 'Comfortaa';
 }
@@ -80,6 +91,11 @@ label {
 }
 
 #pwd_invalid {
+  font-size: 12px;
+  color: red;
+}
+
+#login_invalid {
   font-size: 12px;
   color: red;
 }
