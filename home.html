@@ -13,10 +13,24 @@
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('.datepicker');
+      var options;
       var instances = M.Datepicker.init(elems, options);
     });
-
   </script>
+  <link rel='stylesheet' href='calendar/fullcalendar.css' />
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBwzxC6pW8YkqwD-4jxkiwi-YIcTjegUKk",
+        authDomain: "recroot-e14b9.firebaseapp.com",
+        databaseURL: "https://recroot-e14b9.firebaseio.com",
+        projectId: "recroot-e14b9",
+        storageBucket: "recroot-e14b9.appspot.com",
+        messagingSenderId: "411381874525"
+      };
+      firebase.initializeApp(config);
+    </script>
 </head>
 
 <body>
@@ -51,10 +65,27 @@
 
   <div id="Inbox" class="tabcontent">
     <h3>Inbox</h3>
+    <!-- DELETE THIS LATER, JUST TO POPULATE THE DB -->
+    <button class="apptab" onclick="writeUserData('title1', 'body1')">Add entry</button>
+    <table class="highlight">
+      <thead>
+        <tr>
+            <th>Subject</th>
+            <th>Excerpt</th>
+            <th>Date</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr id="inboxdiv">
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <div id="Calendar" class="tabcontent">
-    <h3>Calendar</h3>
+    <br>
+    <div id='calendar'></div>
   </div>
 
   <script>
@@ -85,7 +116,41 @@
     document.getElementById("defaultOpen").click();
   </script>
 
+<script src="./js/jquery-1.9.0.min.js"></script>
+<script src="./js/jquery-ui-1.10.0.custom.min.js"></script>
+<script src="./js/app.js"></script>
   <!--JavaScript at end of body for optimized loading-->
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+<!-- For the calendar -->
+<script src='lib/jquery.min.js'></script>
+<script src='lib/moment.min.js'></script>
+<script src='calendar/fullcalendar.js'></script>
+<script>
+  $(function () {
+      $('#calendar').fullCalendar({
+        // put your options and callbacks here
+        events: [
+          {
+            title: 'event1',
+            start: '2018-11-01'
+          },
+          {
+            title: 'event2',
+            start: '2018-11-05',
+            end: '2018-11-07'
+          },
+          {
+            title: 'event3',
+            start: '2018-11-09T12:30:00',
+            allDay: false // will make the time show
+          }
+        ],
+      })
+      //var calendar = $('#calendar').fullCalendar('getCalendar');
+
+
+    });
+</script>
 </body>
 </html>
