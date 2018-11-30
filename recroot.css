@@ -52,6 +52,7 @@ label {
   border-radius: 5px;
   color: white;
   padding: 12px 20px;
+  margin-top: 12px;
   font-size: 16px;
   font-family: 'Comfortaa';
 }
@@ -66,6 +67,21 @@ label {
 .signup {
   padding: 100px 80px;
   float: left;
+}
+
+#name_invalid {
+  font-size: 12px;
+  color: red;
+}
+
+#email_invalid {
+  font-size: 12px;
+  color: red;
+}
+
+#pwd_invalid {
+  font-size: 12px;
+  color: red;
 }
 
 /* Add a black background color to the top navigation */
