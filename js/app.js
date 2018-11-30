@@ -1,26 +1,50 @@
 var database = firebase.database();
 const settings = {timestampsInSnapshots: true};
 
-function getFormattedDate(date) {
-  var year = date.getFullYear();
-  /// Add 1 because JavaScript months start at 0
-  var month = (1 + date.getMonth()).toString();
-  month = month.length > 1 ? month : '0' + month;
-  var day = date.getDate().toString();
-  day = day.length > 1 ? day : '0' + day;
-  return month + '/' + day + '/' + year;
-}
+// function getFormattedDate(date) {
+//   var year = date.getFullYear();
+//   /// Add 1 because JavaScript months start at 0
+//   var month = (1 + date.getMonth()).toString();
+//   month = month.length > 1 ? month : '0' + month;
+//   var day = date.getDate().toString();
+//   day = day.length > 1 ? day : '0' + day;
+//   return month + '/' + day + '/' + year;
+// }
 
-function writeUserData(msgsubject, msgbody) {
-  var sentDate= new Date();
-  var formattedDate = getFormattedDate(sentDate);
-  console.log(formattedDate)
-  database.ref('inbox/').push({
-    subject: msgsubject,
-    body: msgbody,
-    date: formattedDate
-  });
-}
+// function writeMessageData(msgsubject, msgbody) {
+//   var sentDate= new Date();
+//   var formattedDate = getFormattedDate(sentDate);
+//   console.log(formattedDate)
+//   database.ref('inbox/').push({
+//     subject: msgsubject,
+//     body: msgbody,
+//     date: formattedDate
+//   });
+// }
+
+// function writeApplicationData(appcompany, approle, appstatus) {
+//     var sentDate= new Date();
+//     var formattedDate = getFormattedDate(sentDate);
+//     console.log(formattedDate)
+//     database.ref('applications/').push({
+//       company: appcompany,
+//       role: approle,
+//       date: formattedDate,
+//       status: appstatus
+//     });
+//   }
+
+//   function writeDecisionData(appcompany, approle, appstatus) {
+//     var sentDate= new Date();
+//     var formattedDate = getFormattedDate(sentDate);
+//     console.log(formattedDate)
+//     database.ref('decisions/').push({
+//       company: appcompany,
+//       role: approle,
+//       date: formattedDate,
+//       status: appstatus
+//     });
+//   }
 
 function registerNewUser() {
   var name = $("#name").val();
@@ -80,9 +104,22 @@ function viewProfileModal() {
 }
 
 $( document ).ready(function () {
+//POPULATE INBOX VIEW
   database.ref('inbox').once('value', snapshot => {
     snapshot.forEach(snap => {
         $('#inboxdiv').after("<tr><td>" + snap.val().subject + "</td><td>" + snap.val().body + "</td><td>" + snap.val().date + "</td>");
+   });
+  });
+  // POPULATE APPLICATION VIEW
+  database.ref('applications').once('value', snapshot => {
+    snapshot.forEach(snap => {
+        $('#applicationsdiv').after("<tr><td>" + snap.val().company + "</td><td>" + snap.val().role + "</td><td>" + snap.val().date + "</td><td class='" + snap.val().status + "'>" + snap.val().status + "</td>");
+   });
+  });
+
+  database.ref('decisions').once('value', snapshot => {
+    snapshot.forEach(snap => {
+        $('#decisionsdiv').after("<tr><td>" + snap.val().company + "</td><td>" + snap.val().role + "</td><td>" + snap.val().date + "</td><td class='" + snap.val().status + "'>" + snap.val().status + "</td>");
    });
   });
 
