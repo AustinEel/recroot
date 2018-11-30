@@ -152,3 +152,61 @@ $( document ).ready(function () {
     console.log("profile click");
   })
 });
+
+//CALENDAR STUFF
+
+$(function () {
+  $('#calendar').fullCalendar({
+    // put your options and callbacks here
+    events: [
+      {
+        title: 'Google',
+        start: '2018-11-01T12:30:00'
+      },
+      {
+        title: 'Facebook',
+        start: '2018-11-05T14:00:00',
+      },
+      {
+        title: 'Microsoft onsite',
+        start: '2018-11-08T10:00:00',
+        end: '2018-11-10T10:00:00',
+        allDay: false // will make the time show
+      }
+    ],
+    eventColor: '#7A003D',
+    timeFormat: 'h:mmt',
+    fixedWeekCount: false,
+    height: "auto"
+  })
+
+  //start needs to be in format '2018-11-05T14:00:00
+  function addEventToCalendar(title, start)
+  {
+    $('#calendar').fullCalendar("addEventSource", {
+      events: [
+        {
+          title: title,
+          start: start
+        }
+      ]
+    })
+  }
+  // var calendar = $('#calendar').fullCalendar('getCalendar');
+  // $('#calendar').fullCalendar("addEventSource", {
+  //   events: [
+  //     {
+  //       title: 'Event1',
+  //       start: '2018-11-04'
+  //     },
+  //     {
+  //       title: 'Event2',
+  //       start: '2018-11-05'
+  //     }
+  //     // etc...
+  //   ],
+  //   color: 'yellow',   // an option!
+  //   textColor: 'black' // an option!
+  // })
+
+});

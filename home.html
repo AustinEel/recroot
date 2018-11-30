@@ -181,7 +181,7 @@
 <script src='lib/moment.min.js'></script>
 <script src='calendar/fullcalendar.js'></script>
 
-<script>
+<!-- <script>
   $(function () {
       $('#calendar').fullCalendar({
         // put your options and callbacks here
@@ -204,13 +204,26 @@
         eventColor: '#7A003D',
         timeFormat: 'h:mmt', 
         fixedWeekCount: false,
-        height: "auto",
-        aspectRatio: 1
+        height: "auto"
       })
-      //var calendar = $('#calendar').fullCalendar('getCalendar');
-
+      // var calendar = $('#calendar').fullCalendar('getCalendar');
+      $('#calendar').fullCalendar("addEventSource", {
+      events: [
+        {
+          title: 'Event1',
+          start: '2018-11-04'
+        },
+        {
+          title: 'Event2',
+          start: '2018-11-05'
+        }
+        // etc...
+      ],
+      color: 'yellow',   // an option!
+      textColor: 'black' // an option!
+    })
 
     });
-</script>
+</script> -->
 </body>
 </html>
