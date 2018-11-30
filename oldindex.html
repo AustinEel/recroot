@@ -5,11 +5,8 @@
   <title>Recroot</title>
   <link href="recroot.css" rel="stylesheet" />
   <link rel="shortcut icon" href="./img/owl.ico" type="image/x-icon" />
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <script type="text/javascript" src="js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -25,34 +22,41 @@
   </script>
 </head>
 <body>
-  <!-- <div class="topnav">
-    <a href="index.html">Back to Sign Up</a>
-  </div> -->
-  <div class="bg">
+    <div class="topnav">
+      <a href="login.html">Login</a>
+    </div>
     <div class="name">
-      <h1>Hi again!</h1>
+      <h1>Recroot</h1>
     </div>
     <div class="signup">
-      <h4>Login</h4>
+      <p>Signup</p>
       <form class="gray-container">
-        <div class="input-field">
-          <label for="name">Username:</label>
-          <input type="text" class="form-control" id="l_name">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name">
         </div>
-        <div class="input-field">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" id="email">
+        </div>
+        <div class="form-group">
           <label for="pwd">Password:</label>
-          <input type="password" class="form-control" id="l_pwd">
+          <input type="password" class="form-control" id="pwd1">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Confirm Password:</label>
+          <input type="password" class="form-control" id="pwd2">
         </div>
       </form>
       <div class="invalid">
-        <p hidden id="login_invalid">Your login credentials don't match. Try again.</p>
+        <p hidden id="name_invalid">Please enter a valid name.</p>
+        <p hidden id="email_invalid">Please enter a valid email.</p>
+        <p hidden id="pwd_invalid">Your passwords do not match.</p>
       </div>
       <div>
-        <button type="submit" class="signupbtn" id="loginbtn">Log In</button>
+        <button type="submit" class="signupbtn" id="signupbtn">Sign Up</button>
       </div>
     </div>
-  </div>
-
   <script src="./js/jquery-1.9.0.min.js"></script>
   <script src="./js/jquery-ui-1.10.0.custom.min.js"></script>
   <script src="./js/app.js"></script>
