@@ -1,5 +1,4 @@
 var database = firebase.database();
-var cloud = firebase.storage().ref();
 const settings = {timestampsInSnapshots: true};
 
 // function getFormattedDate(date) {
@@ -98,16 +97,6 @@ function readURL(input) {
   }
 }
 
-function viewProfileModal() {
-  var modal = document.getElementById("profile_modal");
-  modal.style.display = "block";
-
-  var close = document.getElementsByClassName("close")[0];
-  close.onclick = function() {
-    modal.style.display = "none";
-  }
-} 
-
 $( document ).ready(function () {
 //POPULATE INBOX VIEW
   database.ref('inbox').once('value', snapshot => {
@@ -132,8 +121,8 @@ $( document ).ready(function () {
     $("#name_invalid").hide();
     $("#email_invalid").hide();
     $("#pwd_invalid").hide();
-    registerNewUser();
     if (validateInput()) {
+      registerNewUser();
       window.location.href = "resume.html";
     }
   });
