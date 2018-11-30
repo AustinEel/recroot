@@ -198,7 +198,7 @@ $(function () {
       ]
     })
   }
-  document.getElementById ("modalinbox2").addEventListener("click", addEventToCalendar(addEventToCalendar('ASUCLA Interview', '2018-11-05T14:00:00')), false);
+  document.getElementById ("modalinbox2").addEventListener("click", addEventToCalendar('ASUCLA Interview', '2018-11-05T14:00:00'), false);
   // var calendar = $('#calendar').fullCalendar('getCalendar');
   // $('#calendar').fullCalendar("addEventSource", {
   //   events: [
