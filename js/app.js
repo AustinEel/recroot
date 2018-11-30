@@ -151,6 +151,8 @@ $( document ).ready(function () {
   $("#profile").click(function() {
     console.log("profile click");
   })
+
+  addEventToCalendar("CCLE", "2018-11-25T14:00:00");
 });
 
 //CALENDAR STUFF
