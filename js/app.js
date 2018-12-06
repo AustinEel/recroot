@@ -158,6 +158,22 @@ $( document ).ready(function () {
 });
 
 //CALENDAR STUFF
+function addEventToCalendar(title)
+{
+  var start = document.getElementById("interviewDate").value;
+  var date= new Date(start);
+  console.log(date);
+  var parsedDate = date.toISOString();
+  console.log(parsedDate);
+  $('#calendar').fullCalendar("addEventSource", {
+    events: [
+      {
+        title: title,
+        start: parsedDate
+      }
+    ]
+  })
+}
 
 $(function () {
   $('#calendar').fullCalendar({
@@ -185,17 +201,6 @@ $(function () {
   })
 
   //start needs to be in format '2018-11-05T14:00:00
-  function addEventToCalendar(title, start)
-  {
-    $('#calendar').fullCalendar("addEventSource", {
-      events: [
-        {
-          title: title,
-          start: start
-        }
-      ]
-    })
-  }
 
   // $("#calendar").fullCalendar("removeEventSource", {
   //   events: [
@@ -206,7 +211,7 @@ $(function () {
   //   ]
   // });
 
-  document.getElementById ("scheduleevent").addEventListener("click", addEventToCalendar('ASUCLA Interview', '2018-11-23T13:00:00'), false);
+  // document.getElementById ("scheduleevent").addEventListener("click", addEventToCalendar('ASUCLA Interview', '2018-11-23T13:00:00'), false);
   // var calendar = $('#calendar').fullCalendar('getCalendar');
   // $('#calendar').fullCalendar("addEventSource", {
   //   events: [

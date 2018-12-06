@@ -15,7 +15,9 @@
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('.datepicker');
-      var options;
+      var options= {
+        "disableWeekends": true
+      };
       var instances = M.Datepicker.init(elems, options);
     });
   </script>
@@ -139,7 +141,7 @@
             <h4>Congratulations! We'd like to extend you an offer!</h4>
             <strong>From: Two Sigma HR</strong>
             <p>Congratulations! Everyone was super impressed by your interview, and we would love to extend an offer to you for the position of <strong>Software Engineer Intern.</strong></p>
-            <center><button class="acceptbtn">Accept</button><br /><br /><hr /><button class="declinebtn">Deny</button></center>
+            <center><button class="acceptbtn modal-close">Accept</button><br /><br /><hr /><button class="declinebtn modal-close">Deny</button></center>
           </div>
         <div class="modal-footer">
           <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Dismiss</a>
@@ -149,10 +151,13 @@
         <div class="modal-content">
             <h4>You're Invited to onsite interviews!</h4>
             <strong>From: ASUCLA R&D</strong>
-            <p>We want to know more about you! Click the button below to schedule your interview.</p>
-            <button class='signupbtn' id="scheduleevent">Schedule</button>
+            <p>We want to know more about you! Click the button below to schedule your interview. Make sure to be mindful of major holidays and weekends, as well as allowing enough time for travel to and from our campus. If no time works, email your recruiter to explore alternative options.</p>
+            <input id="interviewDate" type="text" class="datepicker">
+            <label for="grad">Interview Date</label>
+            <!-- <a href="#" class="signupbtn model-close" id="scheduleevent">Schedule</a> -->
           </div>
         <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="addEventToCalendar('ASUCLA Interview')">Dismiss</a>
           <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Dismiss</a>
         </div>
     </div>
